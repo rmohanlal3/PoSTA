@@ -1,0 +1,39 @@
+pip install nemo_toolkit[tts]
+pip install soundfile librosa
+nvidia-smi
+import torch
+import soundfile as sf
+from nemo.collections.tts.models import FastPitchModel, HifiGanModel
+
+# Use GPU if available
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
+# Load pretrained models
+fastpitch = FastPitchModel.from_pretrained(
+    model_name="tts_en_fastpitch"
+).to(device)
+
+hifigan = HifiGanModel.from_pretrained(
+    model_name="tts_hifigan"
+).to(device)
+
+# Positive self-talk text
+text = (
+    "You are doing better than you think. "
+    "Take a deep breath. "
+    "You are capable, calm, and in control."
+)
+
+# Generate spectrogram
+with torch.no_grad():
+    parsed = fastpitch.parse(text)
+    spectrogram = fastpitch.generate_spectrogram(tokens=parsed)
+
+    # Convert spectrogram to waveform
+    audio = hifigan.convert_spectrogram_to_audio(spec=spectrogram)
+
+# Save audio
+audio = audio.cpu().numpy()[0]
+sf.write("positive_self_talk.wav", audio, samplerate=22050)
+
+print("Audio saved as positive_self_talk.wav")
