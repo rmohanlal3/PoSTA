@@ -1,5 +1,5 @@
-pip install nemo_toolkit[tts]
-pip install soundfile librosa
+!pip install nemo_toolkit[tts]
+!pip install soundfile librosa
 nvidia-smi
 import torch
 import soundfile as sf
