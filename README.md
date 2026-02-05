@@ -18,3 +18,6 @@ Mobile / Web / Wearable App
 BACKEND API DEPLOYMENT:
 pip install fastapi uvicorn nemo_toolkit[tts] soundfile torch
 
+RUN BACKEND:
+uvicorn tts_service:app --host 0.0.0.0 --port 8000
+
