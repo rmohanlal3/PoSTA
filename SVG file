@@ -1,0 +1,95 @@
+<svg width="900" height="1250" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5B6CFF"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .bg { fill:#F5F7FB; }
+    .card { fill:#fff; stroke:#D6DBE6; stroke-width:2; rx:12; ry:12; }
+    .title { font-size:26px; font-family:Arial; font-weight:bold; fill:#fff; }
+    .label { font-size:18px; font-family:Arial; fill:#1F2937; }
+    .small { font-size:14px; font-family:Arial; fill:#1F2937; }
+    .btn { fill:#5B6CFF; rx:10; ry:10; }
+    .btnText { fill:#fff; font-size:15px; font-family:Arial; }
+    .slider { stroke:#8B5CF6; stroke-width:4; }
+  </style>
+
+  <!-- Background -->
+  <rect width="900" height="1250" class="bg"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="900" height="100" fill="url(#headerGrad)"/>
+  <text x="450" y="65" text-anchor="middle" class="title">
+    Positive Self-Talk AI App (PoSTAA)
+  </text>
+
+  <!-- Presets -->
+  <rect x="50" y="130" width="360" height="260" class="card"/>
+  <text x="70" y="165" class="label">Presets</text>
+
+  <rect x="80" y="190" width="300" height="42" class="card"/>
+  <text x="100" y="218" class="small">Morning Boost</text>
+
+  <rect x="80" y="240" width="300" height="42" class="card"/>
+  <text x="100" y="268" class="small">Confidence</text>
+
+  <rect x="80" y="290" width="300" height="42" class="card"/>
+  <text x="100" y="318" class="small">Stress Relief</text>
+
+  <rect x="80" y="340" width="300" height="42" class="card"/>
+  <text x="100" y="368" class="small">Sleep Calm</text>
+
+  <!-- Voice -->
+  <rect x="450" y="130" width="400" height="260" class="card"/>
+  <text x="470" y="165" class="label">Voice Settings</text>
+
+  <text x="470" y="205" class="small">Speed</text>
+  <line x1="470" y1="225" x2="820" y2="225" class="slider"/>
+  <circle cx="650" cy="225" r="8" fill="#5B6CFF"/>
+
+  <text x="470" y="265" class="small">Pitch</text>
+  <line x1="470" y1="285" x2="820" y2="285" class="slider"/>
+  <circle cx="650" cy="285" r="8" fill="#5B6CFF"/>
+
+  <!-- Affirmations -->
+  <rect x="50" y="420" width="800" height="260" class="card"/>
+  <text x="70" y="455" class="label">Your Affirmation</text>
+
+  <rect x="80" y="480" width="740" height="150" class="card"/>
+  <text x="100" y="525" class="small">You are doing better than you think.</text>
+  <text x="100" y="555" class="small">Take a deep breath.</text>
+  <text x="100" y="585" class="small">You are safe and in control.</text>
+
+  <!-- Button -->
+  <rect x="330" y="700" width="240" height="52" class="btn"/>
+  <text x="450" y="734" text-anchor="middle" class="btnText">
+    Today’s Affirmations
+  </text>
+
+  <!-- Video -->
+  <rect x="80" y="780" width="420" height="180" class="card"/>
+  <text x="290" y="870" text-anchor="middle" class="small">
+    Personalized AI Video Clip Preview
+  </text>
+
+  <!-- Speak -->
+  <rect x="560" y="820" width="200" height="72" class="btn"/>
+  <text x="660" y="865" text-anchor="middle" class="btnText">
+    ▶ Speak
+  </text>
+
+  <!-- Player -->
+  <rect x="150" y="990" width="600" height="60" class="card"/>
+  <line x1="200" y1="1020" x2="700" y2="1020" class="slider"/>
+  <circle cx="430" cy="1020" r="8" fill="#5B6CFF"/>
+
+  <!-- Footer -->
+  <text x="450" y="1130" text-anchor="middle" class="small">
+    Daily Tips • Favorites • History
+  </text>
+
+</svg>
